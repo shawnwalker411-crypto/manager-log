@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manager Log</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Manager Log</h1>
+    <p class="subtitle">Track updates and notes even when offline.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>New Entry</h2>
+      <form id="entry-form">
+        <label for="entry">Notes</label>
+        <textarea id="entry" name="entry" rows="4" placeholder="Add a quick update..." required></textarea>
+        <button type="submit">Save Entry</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Recent Entries</h2>
+      <ul id="entry-list" class="entry-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Progressive Web App demo for offline-friendly logging.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
